@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost per answer is the invoice, cost per call is the brochure</title>
+<style>
+body{font-family:Georgia,serif;max-width:660px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#22201c;background:#fbfaf7}
+h1{font-size:1.55rem;line-height:1.3}
+p{margin:0 0 1.05em}
+a{color:#7a4a12}
+footer{margin-top:2rem;font-size:.85rem;color:#777}
+</style>
+</head>
+<body>
+<h1>Cost per answer is the invoice, cost per call is the brochure</h1>
+
+<p>A retrieval call that stuffs 30,000 tokens of context into the prompt and collects a 300-token answer bills 1.98 cents at 60 cents per million input tokens and $6 per million output tokens, and 91 percent of that is the prompt. At 2,000 answers a day the brochure number is $39.60 a day, $14,454 a year. The invoice never matches it, because the invoice is priced per answer and answers carry a failure rate.</p>
+
+<p>Cost per answer is cost per call divided by the success rate. At 95 percent it runs 2.08 cents, 5 percent over sticker. At 80 percent it is 2.48 cents, a quarter over. At 60 percent it hits 3.30 cents, two thirds over, and the 2,000-answer day closes at $66 instead of $41.68, $24,090 a year instead of $15,215, an $8,875 gap caused by nothing but flakiness.</p>
+
+<p>Retry policy is a red herring on this ledger. With independent failures, expected attempts per answer equal one over the success rate, so a client that never retries, one that retries once, and one that retries five times converge on the same cost per answer. The cap only decides whether the tail shows up as missing answers in the product or as duplicate spend on the provider's meter. The failure rate sets the price; the retry cap just picks who holds it.</p>
+
+<p>The only lever that moves the invoice is the failure rate itself. A schema preamble that pins the response shape costs about 250 input tokens, under one percent of this call, and deletes the malformed-JSON tail. Retrying only requests the server never started keeps duplicates off the meter, and idempotency keys stop the double charge. Lift success from 60 to 95 percent and the same 2,000 answers hand $8,875 a year back to the budget.</p>
+
+<footer>Serving-cost audits like this live at <a href="https://pastagi.com/">PastAGI</a>, the <a href="https://pastagi.com/">AI engineering site</a> that prices what the pricing page rounds off.</footer>
+</body>
+</html>
